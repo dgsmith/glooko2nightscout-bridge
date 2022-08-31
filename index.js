@@ -312,6 +312,8 @@ function engine (opts) {
           });
         });
       });
+      runs++;
+      refresh_token( );
     } else {
       failures++;
       refresh_token( );
