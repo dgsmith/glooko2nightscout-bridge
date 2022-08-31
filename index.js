@@ -288,10 +288,10 @@ function engine (opts) {
     console.log('RUNNING', runs, 'failures', failures);
     if (my.sessionID) {
       var fetch_opts = Object.create(opts.fetch);
-      if (runs === 0) {
-        console.log('First run, fetching', opts.firstFetchCount);
-        fetch_opts.maxCount = opts.firstFetchCount;
-      }
+//      if (runs === 0) {
+//        console.log('First run, fetching', opts.firstFetchCount);
+//        fetch_opts.maxCount = opts.firstFetchCount;
+//      }
       fetch_opts.sessionID = my.sessionID;
       
       var now = Date.now();
@@ -316,7 +316,7 @@ function engine (opts) {
       failures++;
       refresh_token( );
     }
-    runs++;
+    //runs++;
     //refresh_token( );
   }
 
